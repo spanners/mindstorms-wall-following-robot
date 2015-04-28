@@ -1,0 +1,80 @@
+
+leJOS
+=====
+
+The leJOS website has intructions, tutorials, and API documentation.
+
+http://lejos.sourceforge.net/
+
+You want the software for the NXT brick.
+
+
+leJOS Firmware
+--------------
+
+In order to use leJOS, you need to replace the default lego firmware
+on the NXT with the leJOS firmware.  How to do this depends on your
+operating system.
+
+The device needs to be in firmware update mode.  To do this, you need
+to push the reset button on the top left of the back of the device
+using a paperclip or something similar.  When in update mode, the
+device will make a soft clicking noise while it waits for you to
+reflash it.
+
+
+Other Notes
+-----------
+
+Some useful notes about installing/using on linux:
+
+http://videmos.blogspot.com/search/label/lejos
+
+Bluetooth is more convenient than plugging the robot into the cable
+each time you make a change.
+
+
+API
+---
+
+The api provided by leJOS is very easy to use.
+
+  //create a new bump sensor on port 1
+  TouchSensor bump = new TouchSensor(SensorPort.S1);
+
+  if( bump.isPressed() ) { ... }
+
+Other sensors are similar:
+
+  UltrasonicSensor ultra = new UltrasonicSensor(SensorPort.S3);
+
+
+For two-wheeled vehicles, the TachoPilot has many methods
+that make it easy to control and steer different paths.
+
+  //create new pilot.
+  //arguments are wheel size, distance between wheels, and 
+  //ports for left and right motors
+  TachoPilot pilot = new TachoPilot(.56f, 1.18f, Motor.B, Motor.C);
+
+  pilot.travel(distance);
+
+  while( pilot.isMoving() ) {
+    // check for sensors, etc.
+
+    if( bump.isPressed() ) {
+      pilot.stop();
+    }
+  }
+
+
+Motors can also be controlled individually.
+
+  Motor motor = new Motor(MotorPort.A);
+
+  //rotate to angle
+  motor.rotateTo(75);
+
+
+
+

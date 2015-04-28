@@ -1,0 +1,25 @@
+I have programmed the robot to go forwards for 4 wheel rotations, then
+backwards 4, then forwards 4, etc, an EVEN number of times. A kind of robot
+waltz.  If the robot were perfectly accurate, it would end up where it started,
+but due to the way the robot is built and other things, it ends up quite far
+away
+
+Now what?
+
+I have restricted the robots motion to forward and backwards in a straight
+line.  I have encoded the robot's environment in a simple 1D world of size 6.
+
+    ["X","_","X","X","_","X"]
+
+Where the "X" are obstacles of uniform size n, and the blanks "_" are of size n
+
+I can quantize the robot's movement according to this world like so:
+
+    For every wheels.travel(21);,
+	Update the robot's position + 1 
+
+Plus some uncertainty to account for wheel slippage, offset position of rear
+wheel etc.
+
+This uncertainty must be determined experimentally, and can then be factored
+into calculations as accumulated error, e.g. in Kalman filter usage.
