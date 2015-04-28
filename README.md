@@ -6,14 +6,14 @@ Base set][9797] with [9841 NXT Intelligent Brick][9841] running [leJOS
 
 ## PHOTO: LEGO Robot
 
-![Image](../blob/master/report/robot.jpg?raw=true)
+![Image](/blob/master/report/robot.jpg?raw=true)
 
 Front and Side-view of Lego Mindstorms NXJ robot showing ultrasonic sensor and
 bump sensors]
 
 ## Finite State Machine diagram
 
-![Image](../blob/master/report/fsm.png?raw=true)
+![Image](/blob/master/report/fsm.png?raw=true)
 
 Flow diagram of robot finite state machine
 
