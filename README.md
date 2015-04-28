@@ -6,12 +6,16 @@ Base set][9797] with [9841 NXT Intelligent Brick][9841] running [leJOS
 
 ## PHOTO: LEGO Robot
 
-![Front and Side-view of Lego Mindstorms NXJ robot showing ultrasonic sensor and
-bump sensors][]
+[[report/robot.jpg]]
+
+Front and Side-view of Lego Mindstorms NXJ robot showing ultrasonic sensor and
+bump sensors]
 
 ## Finite State Machine diagram
 
-![Flow diagram of robot finite state machine][]
+[[report/fsm.png]]
+
+Flow diagram of robot finite state machine
 
 ## CODE: Core wall-following logic
 
